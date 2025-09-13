@@ -1,8 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './App.css'
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { About, Cart, Contact, Home, Shop, WishList } from './pages'
 import { Layout } from './components'
+import { MobileHandlerProvider } from './utils/mobileHandler'
+import { Fragment } from 'react'
 
 function App() {
 
@@ -23,7 +24,13 @@ function App() {
 
   ])
 
-  return <RouterProvider router={router} />
+  return (
+    <Fragment>
+        <MobileHandlerProvider>
+          <RouterProvider router={router} /> {/* this section as children  */}
+        </MobileHandlerProvider>
+    </Fragment>
+  )
 }
 
 export default App

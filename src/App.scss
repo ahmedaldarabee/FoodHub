@@ -1,0 +1,45 @@
+@import "./styles/global/variables";
+@import "./styles/components/navbar/navbar.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// font face to define fonts
+@font-face {
+    font-family: "Fiber";
+    src:url("/assets/fonts/FibreFF/fibre-font.otf");
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: url("./assets/Images/darkBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white-color ;
+}
+
+h2,h3 {
+    font-family: "Fiber";
+}
+
+a {
+    text-decoration: none;
+    color: $white-color;
+}
+
+.container {
+    padding-inline: 0.62rem; // like px
+    padding-block-start: 1.56rem; // like py
+}
+
+@media (max-width:1024px) {
+    .container {
+        padding-inline: 1.62rem;
+        padding-block-start: 1.56rem;
+    }
+}

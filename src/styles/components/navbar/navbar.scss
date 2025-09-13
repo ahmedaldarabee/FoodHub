@@ -1,0 +1,147 @@
+
+.navbar {
+    .container {
+        overflow: hidden;
+      
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-inline: calc(2.5rem + 1.63rem);
+        padding-block-start: calc(3.13rem + 1.56rem);
+
+        ul {
+            display: none;
+            align-items: center;
+            gap: 3.06rem;
+
+            // a we mean about it : NavLink
+            a {
+                color: rgba($color:$white-color,$alpha:0.5);
+                font-size: 1.25rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                transition: all 0.3s ease-in-out;
+                position: relative;
+                // Same NavLink a, as parent
+                &.active {
+                    color: $white-color;
+                    display: inline-block;
+                    position: relative;
+                    
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 3px;
+                        background: $white-color;
+                        position: absolute;
+                        left: 0;
+                        bottom: -1rem;
+                    }
+
+                }
+
+                &:hover {
+                    color: $white-color;
+                }
+
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 3px;
+                    background: $white-color;
+                    position: absolute;
+                    left: 0;
+                    bottom: -1rem;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .nav--icons {
+            cursor: pointer;
+            display: none;
+            justify-content: center;
+            gap: 1rem;
+
+            .nav--icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 1px solid $white-color;
+                border-radius: 50%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+                transition: all 0.4s ease-in-out;
+                
+                span {
+                    position: absolute;
+                    top: -0.9rem;
+                    right: -0.5rem;
+                    background: #d62828;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-size: 0.9rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                }
+
+                &:hover {
+                    background: #d62828;
+                    border: transparent;
+                }
+            }
+        }
+
+        .nav--barIcon {
+            cursor: pointer;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.5rem;
+            // asterisk - *: that mean every children within parent
+            position: relative;
+            
+            & > * {
+                width: 2.375rem;
+                height: 3px;
+                background: rgba($color: $white-color, $alpha: 1);
+                border-radius: 0.6rem;
+                transition: all 0.4s ease-in-out; // smooth show icons
+            }
+
+            &.menu-open {
+                & > * {
+                    // transition: all 0.4s ease-in-out;
+                    position: absolute;
+                    &:nth-of-type(1){
+                        transform: rotate(45deg);
+                    }
+                    &:nth-of-type(2){
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .navbar {
+        .container {
+            ul, .nav--icons{
+                display: flex;
+            } 
+        }
+    }
+}
