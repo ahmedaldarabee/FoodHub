@@ -1,14 +1,17 @@
 
 .navbar {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    
     .container {
         overflow: hidden;
-      
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        padding-inline: calc(2.5rem + 1.63rem);
-        padding-block-start: calc(3.13rem + 1.56rem);
+        padding-inline: calc(2.5rem + 0.62rem);
+        padding-block-start: calc(3.13rem + 1.06rem);
 
         ul {
             display: none;
@@ -95,7 +98,7 @@
                 }
 
                 &:hover {
-                    background: #d62828;
+                    background:$main-color;
                     border: transparent;
                 }
             }
@@ -139,6 +142,9 @@
 @media (min-width:1024px) {
     .navbar {
         .container {
+            padding-inline: calc(2.5rem + 1.63rem);
+            padding-block-start: calc(3.13rem + 1.56rem);
+
             ul, .nav--icons{
                 display: flex;
             } 

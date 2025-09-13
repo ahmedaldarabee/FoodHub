@@ -1,4 +1,3 @@
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { About, Cart, Contact, Home, Shop, WishList } from './pages'
 import { Layout } from './components'
