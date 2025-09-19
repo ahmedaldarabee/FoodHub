@@ -6,6 +6,12 @@
 @import "./styles/components/banner/banner.scss";
 @import "./styles/components/mostselling/mostSelling.scss";
 @import "./styles/components/headlines/headlines.scss";
+@import "./styles/components/card/card.scss";
+@import "./styles/components/breadCrumbs/breadCrumbs.scss";
+@import "./styles/components/footer/footer.scss";
+@import "./styles/pages/shop/shop.scss";
+@import "./styles/pages/about/about.scss";
+@import "./styles/pages/productDetails/ProductDetails.scss";
 
 
 // fonts
@@ -25,6 +31,7 @@
 
 html {
     font-size: 12px;
+    overflow-x: hidden;
 }
 
 body {

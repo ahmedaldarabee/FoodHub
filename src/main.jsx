@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { createRoot } from 'react-dom/client'
 import React from 'react'
 import App from './App'
 import "./App.scss"
+import 'swiper/css';
+import 'swiper/css/autoplay';
 
 import ReactDOM from 'react-dom/client'
 

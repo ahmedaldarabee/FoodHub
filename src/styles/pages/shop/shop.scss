@@ -1,0 +1,93 @@
+
+.shop {
+
+    .filter-category{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .filterCategory--container {
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+        width: fit-content;
+        margin-top: 9.44rem;
+        margin-bottom: 7.06rem;
+
+        .filter--image {
+            width: 12.5rem;
+            height: 12.5rem;
+            border-radius: 50%;
+            border: 6px solid $white-color;
+            // overflow: hidden;
+            padding: 0.5rem;
+            img {
+                border-radius: 50%;
+                border: none;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &.active {
+            .filter--image  {
+                border-color: $main-color;
+                position: relative;
+                &::after {
+                    content: "\2713";
+                    position: absolute;
+                    top: -1rem;
+                    right: 0.5rem;
+                    width: 3rem;
+                    height: 3rem;
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $main-color;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        span {
+            margin-top: 2.38rem;
+            display: inline-block;
+            font-weight: 600;
+        }
+    }
+
+    .card--items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        .card {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width:600px) {
+    .shop {
+        .card--items{
+            .card {
+                width: calc(100% / 2 - 2.5rem);
+            }
+        }
+    }
+}
+@media (min-width:1024px) {
+    .shop {
+        .card--items{
+            .card {
+                width: calc(100% / 3 - 2.5rem);
+            }
+        }
+    }
+}

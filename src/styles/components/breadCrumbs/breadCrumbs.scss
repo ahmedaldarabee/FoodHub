@@ -1,0 +1,18 @@
+.breadCrumbs{
+    background: linear-gradient(0deg, #000000cc 0%, #000000cc 100%), url("/assets/Images/Hero-Banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 1rem;
+    min-height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .breadCrumbs--text {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}

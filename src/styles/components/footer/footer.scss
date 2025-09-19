@@ -1,0 +1,17 @@
+.footer{ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+
+    .footer--content {
+        text-transform: capitalize;
+        font-size: 1.3rem;
+        span{
+            color: $main-color;
+            font-weight: bolder;
+        }
+    }
+}

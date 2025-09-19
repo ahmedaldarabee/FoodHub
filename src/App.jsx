@@ -14,7 +14,15 @@ function App() {
       children: [
         { index: true, element: <Home/> },
         { path:"/about", element: <About/> },
-        { path:"/shop", element: <Shop /> },
+        { 
+          path:"/shop",
+          element: <Shop />
+        },
+        { 
+          // :slug same unique id idea
+          path:"/shop/:slug", 
+          element: <Cart />
+        },
         { path:"/contact", element: <Contact /> },
         { path:"/wishlist", element: <WishList /> },
         { path:"/cart", element: <Cart /> },
