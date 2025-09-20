@@ -3,6 +3,7 @@ import { About, Cart, Contact, Home, Shop, WishList } from './pages'
 import { Layout } from './components'
 import { MobileHandlerProvider } from './utils/mobileHandler'
 import { Fragment } from 'react'
+import ProductDetails from './pages/productDetails/ProductDetails'
 
 function App() {
 
@@ -21,14 +22,13 @@ function App() {
         { 
           // :slug same unique id idea
           path:"/shop/:slug", 
-          element: <Cart />
+          element: <ProductDetails />
         },
         { path:"/contact", element: <Contact /> },
         { path:"/wishlist", element: <WishList /> },
         { path:"/cart", element: <Cart /> },
       ]
     }
-
   ])
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { CiCircleCheck } from 'react-icons/ci'
 import { FaStar } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Card = () => {
     return (
@@ -25,7 +26,7 @@ const Card = () => {
             </div>
 
             <div className="card-title">
-                <h4>Pork Chop with Apple Chutney</h4>
+                <Link to={"burger-test"} >Pork Chop with Apple Chutney</Link>
             </div>
 
             <div className="card--option">
